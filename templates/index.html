@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Home Page</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{{ url_for('static', filename='img/favicon.png') }}" rel="icon">
+  <link href="{{ url_for('static', filename='img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!-- Vendor CSS Files -->
+  <link href="{{ url_for('static', filename='vendor/animate.css/animate.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/boxicons/css/boxicons.min.cs') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/remixicon/remixicon.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <img style="width: 150px; height: 100px;" src="{{ url_for('static', filename='logo.png') }}" alt=""><a
+          href="/"></a></img>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto " href="/">Trang chủ</a></li>
+          <li><a class="nav-link scrollto " href="/cam_detect">Phân loại cảm xúc</a></li>
+          <li><a class="nav-link scrollto " href="/list">Dữ liệu đã lưu</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-end align-items-center">
+    <div id="heroCarousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Huấn luyện mô hình</h2>
+          <p class="animate__animated fanimate__adeInUp">Sử dụng mô hình VGG-16 để huấn luyện học máy</p>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Ứng dụng thực tế</h2>
+          <p class="animate__animated animate__fadeInUp">Sử dụng mô hình để ứng dụng vào một số lĩnh vực
+             như giáo dục, dịch vụ, chăm sóc khách hàng...</p>
+        </div>
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+
+    <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 24 150 28 " preserveAspectRatio="none">
+      <defs>
+        <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+      </defs>
+      <g class="wave1">
+        <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)">
+      </g>
+      <g class="wave2">
+        <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)">
+      </g>
+      <g class="wave3">
+        <use xlink:href="#wave-path" x="50" y="9" fill="#fff">
+      </g>
+    </svg>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- About Me -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title" data-aos="zoom-out">
+          <h2>About me</h2>
+          <p>Giới thiệu</p>
+        </div>
+
+        <div class="row content aos-init aos-animate" data-aos="fade-up">
+          <div class="col-lg-6">
+            <h5>Họ và tên : Nguyễn Hoàng Anh</h5>
+            <h5>Lớp : 20CT114</h5>
+            <h5>Đề tài : Phân tích cảm xúc khuôn mặt
+              <h5>Giáo viên hướng dẫn : Đoàn Thiện Minh</h5>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Project -->
+    <section id="features" class="features">
+      <div class="container">
+        <div class="section-title" data-aos="zoom-out">
+          <h2>About project</h2>
+          <p>Công nghệ sử dụng</p>
+        </div>
+        <ul class="nav nav-tabs row d-flex" role="tablist">
+          <li class="nav-item col-2 aos-init aos-animate" data-aos="zoom-in" role="presentation">
+            <a class="nav-link show active" data-bs-toggle="tab" href="#tab-1" aria-selected="true" role="tab">
+              <h4 class="d-none d-lg-block">Machine Learning</h4>
+            </a>
+          </li>
+          <li class="nav-item col-2 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100" role="presentation">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab-2" aria-selected="false" role="tab" tabindex="-1">
+              <h4 class="d-none d-lg-block">Kaggle</h4>
+            </a>
+          </li>
+          <li class="nav-item col-2 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="200" role="presentation">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab-3" aria-selected="false" role="tab" tabindex="-1">
+              <h4 class="d-none d-lg-block">Python</h4>
+            </a>
+          </li>
+          <li class="nav-item col-2 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="300" role="presentation">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab-4" aria-selected="false" role="tab" tabindex="-1">
+              <h4 class="d-none d-lg-block">Tensorflow</h4>
+            </a>
+          </li>
+          <li class="nav-item col-2 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="400" role="presentation">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab-5" aria-selected="false" role="tab" tabindex="-1">
+              <h4 class="d-none d-lg-block">Flask</h4>
+            </a>
+          </li>
+          <li class="nav-item col-2 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="500" role="presentation">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab-6" aria-selected="false" role="tab" tabindex="-1">
+              <h4 class="d-none d-lg-block">VGG16</h4>
+            </a>
+          </li>
+        </ul>
+
+        <div class="tab-content aos-init aos-animate" data-aos="fade-up">
+          <div class="tab-pane active show" id="tab-1" role="tabpanel">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3>Machine Learning</h3>
+                <p>
+                  Machine learning (ML) hay máy học là một nhánh của trí tuệ nhân tạo (AI),
+                  nó là một lĩnh vực nghiên cứu cho phép máy tính có khả năng cải thiện chính
+                  bản thân chúng dựa trên dữ liệu mẫu (training data) hoặc dựa vào kinh nghiệm
+                  (những gì đã được học)
+                </p>
+                <p>
+                  Bài toán machine learning thường được chia làm hai loại là dự đoán (prediction)
+                  và phân loại (classification)
+                </p>
+                <p>
+                  Các bước của Machine learning :
+                </p>
+                <ul>
+                  <li class="fst-italic"><i class="ri-check-double-line"></i> Data collection - thu thập dữ liệu</li>
+                  <li class="fst-italic"><i class="ri-check-double-line"></i> Preprocessing - tiền xử lý</li>
+                  <li class="fst-italic"><i class="ri-check-double-line"></i> Training model - huấn luyện mô hình</li>
+                  <li class="fst-italic"><i class="ri-check-double-line"></i> Evaluating model - đánh giá mô hình</li>
+                  <li class="fst-italic"><i class="ri-check-double-line"></i> Improve - cải thiện</li>
+                </ul>
+                <p>
+                  Machine learning được ứng dụng cực kỳ nhiều trong đời sống hiện nay trong mọi
+                  lĩnh vực như : tài chính - ngân hàng, sinh học, nông nghiệp, tự động hóa,
+                  robotics, hóa học,...
+                </p>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="{{ url_for('static', filename='img/ml.png') }}" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="tab-2" role="tabpanel">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3>Kaggle</h3>
+                <p>
+                  Kaggle được thành lập với hoạt động chủ yếu là một cộng đồng trực tuyến
+                  và dành cho những nhà khoa học dữ liệu cùng mọi đối tượng có thể thực hành học máy
+                </p>
+                <p>
+                  Ngoài các cuộc thi, Kaggle còn cung cấp các bộ dữ liệu công cộng, sổ ghi chép về máy học và
+                  các hướng dẫn để giúp người dùng học và thực hành các kỹ năng của họ về khoa học dữ liệu và học máy
+                </p>
+                <p>
+                  Kaggle được dử dụng cho :
+                </p>
+                <ul>
+                  <li class="fst-italic"><i class="ri-check-double-line"></i> Học tập</li>
+                  <li class="fst-italic"><i class="ri-check-double-line"></i> Cộng tác</li>
+                  <li class="fst-italic"><i class="ri-check-double-line"></i> Xây dựng cộng đồng</li>
+                  <li class="fst-italic"><i class="ri-check-double-line"></i> Nghiên cứu</li>
+                </ul>
+                <a href="https://www.kaggle.com/">Truy cập vào Kaggle</a>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img width="300" height="300" src="{{ url_for('static', filename='img/kaggle.png') }}" alt=""
+                  class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="tab-3" role="tabpanel">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3>Python</h3>
+                <p>
+                  Python là ngôn ngữ lập trình máy tính bậc cao thường được sử dụng để xây dựng
+                  trang web và phần mềm, tự động hóa các tác vụ và tiến hành phân tích dữ liệu.
+                </p>
+                <p>
+                  Ứng dụng của Python :
+                </p>
+                <ul>
+                  <li class="fst-italic"><i class="ri-check-double-line"></i> Phân tích dữ liệu và học máy</li>
+                  <li class="fst-italic"><i class="ri-check-double-line"></i> Phát triển web</li>
+                  <li class="fst-italic"><i class="ri-check-double-line"></i> Tự động hóa và phát triển phần mềm</li>
+                </ul>
+                <p>
+
+                </p>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img width="300" height="300" src="{{ url_for('static', filename='img/python.png') }}" alt=""
+                  class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="tab-4" role="tabpanel">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3>Tensorflow</h3>
+                <p>
+                  TensorFlow là thư viện mã nguồn mở cho machine learning nổi tiếng nhất thế giới,
+                  được phát triển bởi các nhà nghiên cứu từ Google
+                </p>
+                <p>
+                  Kiến trúc TensorFlow hoạt động được chia thành 3 phần :
+                </p>
+                <ul>
+                  <li class="fst-italic"><i class="ri-check-double-line"></i> Tiền xử lý dữ liệu</li>
+                  <li class="fst-italic"><i class="ri-check-double-line"></i> Dựng model</li>
+                  <li class="fst-italic"><i class="ri-check-double-line"></i> Train và ước tính model</li>
+                </ul>
+                <p>TensorFlow có 2 component là : tensor và graph</p>
+                <p>Danh sách các thuật toán nổi bật được hỗ trợ bởi TensorFlow</p>
+                <ul>
+                  <li class="fst-italic"><i class="ri-check-double-line"></i> Linear regression:
+                    tf.estimator.LinearRegressor</li>
+                  <li class="fst-italic"><i class="ri-check-double-line"></i> Classification:
+                    tf.estimator.LinearClassifier</li>
+                  <li class="fst-italic"><i class="ri-check-double-line"></i> Deep learning classification:
+                    tf.estimator.DNNClassifier</li>
+                  <li class="fst-italic"><i class="ri-check-double-line"></i> Deep learning wipe and deep:
+                    tf.estimator.DNNLinearCombinedClassifier</li>
+                  <li class="fst-italic"><i class="ri-check-double-line"></i> Booster tree regression:
+                    tf.estimator.BoostedTreesRegressor</li>
+                  <li class="fst-italic"><i class="ri-check-double-line"></i> Boosted tree classification:
+                    tf.estimator.BoostedTreesClassifier</li>
+                </ul>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="{{ url_for('static', filename='img/tensorflow.png') }}" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane" id="tab-5" role="tabpanel">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3>Flask</h3>
+                <p>
+                  Flask là loại framework web phổ biến được viết bằng trình lập ngôn ngữ Python
+                </p>
+                <p>Flask được phát triển theo ý tưởng "Micro - Framework", công nghệ tập trung vào các
+                  tính năng cơ bản và linh hoạt để người phát triển có thể tùy chỉnh theo nhu cầu cụ thể của họ
+                </p>
+                <p>Một số tính năng chính của Flask :</p>
+                <ul>
+                  <li class="fst-italic"><i class="ri-check-double-line"></i> Nhẹ và dễ sử dụng</li>
+                  <li class="fst-italic"><i class="ri-check-double-line"></i> Định tuyến linh hoạt</li>
+                  <li class="fst-italic"><i class="ri-check-double-line"></i> Công cụ mẫu</li>
+                  <li class="fst-italic"><i class="ri-check-double-line"></i> Được mở rộng rộng rãi</li>
+                  <li class="fst-italic"><i class="ri-check-double-line"></i> Máy chủ phát triển tích hợp</li>
+                  <li class="fst-italic"><i class="ri-check-double-line"></i> Gửi yêu cầu RESTful</li>
+                </ul>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img width="300" height="300" src="{{ url_for('static', filename='img/flask.png') }}" alt=""
+                  class="img-fluid">
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane" id="tab-6" role="tabpanel">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3>VGG-16</h3>
+                <p>
+                  Mô hình VGG-16 là kiến trúc mạng thần kinh tích chập (CNN) được đề xuất bởi
+                  Nhóm Hình học Trực quan (VGG) tại Đại học Oxford
+                </p>
+                <p>Kiến trúc VGG-16 là mạng nơ ron tích chập sâu (CNN) được thiết kế cho các nhiệm vụ phân loại hình ảnh
+                </p>
+                <p>
+                  Cấu hình VGG-16 thường bao gồm 16 lớp, trong đó có 13 lớp chập và 3 lớp được
+                  kết nối đầy đủ. Các lớp này được tổ chức thành các khối, trong đó mỗi khối chứa nhiều
+                  lớp tích chập, theo sau là lớp tổng hợp tối đa để lấy mẫu xuống
+                </p>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="{{ url_for('static', filename='img/vgg16.png') }}" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="social-links">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+      <div class="credits">
+        NGUYỄN HOÀNG ANH
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{{ url_for('static', filename='vendor/aos/aos.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/glightbox/js/glightbox.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/php-email-form/validate.js') }}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+
+</html>
